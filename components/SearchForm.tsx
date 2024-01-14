@@ -91,7 +91,7 @@ function SearchForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex flex-col lg:flex-row lg:max-w-6xl lg:mx-auto items-center justify-center space-x-0 lg:space-x-2 space-y-4 lg:space-y-0 rounded-lg"
       >
-        <div className="grid w-full lg:max-w-sm items-center gap-1.5">
+        <div className="grid w-full lg:max-w-sm items-center gap-1.5 ">
           <FormField
             control={form.control}
             name="location"
@@ -101,11 +101,10 @@ function SearchForm() {
                   Location <BedDoubleIcon className="ml-2 h-4 w-4 text-white" />
                 </FormLabel>
 
-                <FormMessage />
-
                 <FormControl>
                   <Input placeholder="London, UK" {...field} />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />
@@ -118,9 +117,6 @@ function SearchForm() {
             render={({ field }) => (
               <FormItem className="flex flex-col">
                 <FormLabel className="text-white">Dates</FormLabel>
-
-                <FormMessage />
-
                 <Popover>
                   <PopoverTrigger asChild>
                     <FormControl>
@@ -164,7 +160,8 @@ function SearchForm() {
                       }
                     />
                   </PopoverContent>
-                </Popover>
+                </Popover>{" "}
+                <FormMessage />
               </FormItem>
             )}
           />

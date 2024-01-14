@@ -28,11 +28,11 @@ async function SearchPage({ searchParams }: Props) {
 
   return (
     <section>
-      <div className="mx-auto max-w-7xl p-6 lg:px-8">
+      <div className="mx-auto max-w-7xl p-6 mt-5 lg:px-8">
         <h1 className="text-4xl font-bold pb-3">Your Trip Results</h1>
 
         <h2 className="pb-3">
-          Dates of Trip:{" "}
+          Dates of Trip:
           <span className="italic ml-2">
             {searchParams.checkin} to {searchParams.checkout}
           </span>
@@ -42,11 +42,11 @@ async function SearchPage({ searchParams }: Props) {
           {results.content.total_listings}
         </h3>
 
-        <div className="space-y-2 mt-5">
+        <div className="space-y-2 mt-9 ">
           {results.content.listings.map((item, i) => (
             <div
               key={i}
-              className="flex space-y-2 justify-between space-x-4 p-5 border rounded-lg"
+              className="flex space-y-2 justify-between space-x-4 p-5 opacity-80 hover:opacity-100 bg-white border rounded-lg hover:shadow-lg duration-300 ease-in-out cursor-pointer hover:-translate-y-5 hover:scale-110"
             >
               <img
                 src={item.url}
