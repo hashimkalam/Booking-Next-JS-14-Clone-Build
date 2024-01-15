@@ -22,13 +22,13 @@ async function SearchPage({ searchParams }: Props) {
 
   const results = await fetchResults(searchParams);
 
-  if (!results) return <div>No results</div>;
+  if (!results) return <div className="min-h-[90vh]">No results</div>;
 
   console.log(results);
 
   return (
     <section>
-      <div className="mx-auto max-w-7xl p-6 mt-5 lg:px-8">
+      <div className="mx-auto max-w-7xl p-6 pt-10 lg:px-8 min-h-[100vh] bg-red-50">
         <h1 className="text-4xl font-bold pb-3">Your Trip Results</h1>
 
         <h2 className="pb-3">
@@ -46,7 +46,7 @@ async function SearchPage({ searchParams }: Props) {
           {results.content.listings.map((item, i) => (
             <div
               key={i}
-              className="flex space-y-2 justify-between space-x-4 p-5 opacity-80 hover:opacity-100 bg-white border rounded-lg hover:shadow-lg duration-300 ease-in-out cursor-pointer hover:-translate-y-5 hover:scale-110"
+              className="flex space-y-2 justify-between space-x-4 p-5 opacity-80 hover:opacity-100 bg-white border rounded-lg hover:shadow-lg duration-300 ease-in-out cursor-pointer hover:-translate-y-5 hover:scale-105"
             >
               <img
                 src={item.url}

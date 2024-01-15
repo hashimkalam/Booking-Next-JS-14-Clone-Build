@@ -3,7 +3,7 @@ import { trending_data } from "@/data/trending";
 
 export default function Home() {
   return (
-    <main className="bg-[#013B94] min-h-[160vh]">
+    <main className="bg-[#013B94] min-h-[138vh] lg:h-[160vh] xl:h-[135vh]">
       <div className="bg-cover bg-center bg-no-repeat custom-background ">
         <section className="max-w-7xl mx-auto p-6 pt-[15%]">
           <h2 className="font-bold text-5xl text-white ">
@@ -19,7 +19,7 @@ export default function Home() {
         </section>
       </div>
 
-      <section className="mx-auto max-w-7xl my-[2%] p-6 bg-white rounded-t-lg">
+      <section className="mx-auto max-w-7xl my-[6%] lg:my-[2%] p-6 bg-white rounded-t-lg">
         <div className="pt-5">
           <h3 className="text-xl font-bold"> Trending Destinations </h3>
           <p className="font-light">
